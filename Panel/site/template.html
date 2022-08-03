@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+  <title>Mining Panel</title>
+
+  <script src="index.js"></script>
+
+</head>
+<body>
+<header>
+  <div id="title" onclick="offToggAll()">
+    <img src="favicon.png" alt="favicon" id="favicon" onclick="console.log('test')">
+    <h1>Mining Panel</h1>
+  </div>
+
+  <div class="top-line"></div>
+
+  <nav id="menu">
+
+    <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+
+    <ul>
+      <li class='li-menu'>
+        <div class="menu-entry">
+          <img src="linux_eth.png" alt="" class="folder">
+          <a class='dropdown-arrow' class="menu-button-text">MiningOS</a>
+        </div>
+        <ul class='sub-menus'>
+          <li class='sub-menus-content' onClick='multiTogg("hive", "site", true)'>
+            <img src="faviconH.png" alt="" class="page">
+            <a id="portainerMenu" class="menu-button-text">HiveOS</a>
+          </li>
+          <li class='sub-menus-content' onClick='multiTogg("proxy", "site", true)'>
+            <img src="faviconE.png" alt="" class="page">
+            <a id="proxyMenu" class="menu-button-text">EMOS</a>
+          </li>
+          <li class='sub-menus-content' onClick='multiTogg("minerstat", "site", true)'>
+            <img src="minerstat.png" alt="" class="page">
+            <a id="proxyMenu" class="menu-button-text">Minerstat</a>
+          </li>
+        </ul>
+      </li>
+      <li class='li-entry' onClick='multiTogg("vnc", "site", true)'>
+        <div class="menu-entry">
+          <img src="page2.png" alt="" class="page">
+          <a id="sshMenu" class="menu-button-text">VNC Connect</a>
+        </div>
+      </li>
+
+      <li class='li-entry' onClick='multiTogg("coin360", "site", true)'>
+        <div class="menu-entry">
+          <img src="page.png" alt="" class="page">
+          <a class='dropdown-arrow' class="menu-button-text">Coin360</a>
+        </div>
+      </li>
+
+      <li class='li-menu'>
+        <div class="menu-entry">
+          <img src="favicon.png" alt="" class="folder">
+          <a class='dropdown-arrow'>Mining Pools</a>
+        </div>
+        <ul class='sub-menus'>
+          <li class='sub-menus-content'><img src="favicon2M.png" alt="" class="page"><a href='https://2miners.com/' target="_blank">2Miners</a></li>
+          <li class='sub-menus-content'><img src="faviconET.png" alt="" class="page"><a href='https://etc.ethermine.org/' target="_blank">Ethermine</a></li>
+          <li class='sub-menus-content'><img src="faviconH.png" alt="" class="page"><a href='https://hiveon.net/' target="_blank">HiveOn Pool</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <img src="settings.png" alt="settings icon" id="settings" onclick="console.log('test')">
+</header>
+
+<section id="page">
+  <div id="site" class="showBoxClass iframeListe">
+    <div id="portainer" class="showClass">
+      <img src="iframe_bg.png" alt="iframe background">
+      <iframe src="https://the.hiveos.farm/?session_state=7a72b553-f890-4b87-96c8-61ce269e18c9&code=a13ae9ee-1ab0-46c6-9193-7f54219401d2.7a72b553-f890-4b87-96c8-61ce269e18c9.3cf9ca31-85c6-458f-9dda-fb09f023724f"></iframe>
+    </div>
+
+    <div id="proxy" class="showClass">
+      <img src="iframe_bg.png" alt="iframe background">
+      <iframe src="https://easy-mining-os.com/"></iframe>
+    </div>
+
+    <div id="vnc" class="showClass">
+      <img src="iframe_bg.png" alt="iframe background">
+      <iframe src="https://192.168.1.38:4200/"></iframe>
+    </div>
+    
+    <div id="coin360" class="showClass">
+      <img src="iframe_bg.png" alt="iframe background">
+      <iframe src="https://coin360.com/"></iframe>
+    </div>
+
+    <div id="minerstat" class="showClass">
+      <img src="iframe_bg.png" alt="iframe background">
+      <iframe src="https://minerstat.com/software/mining-os/"></iframe>
+    </div>
+  </div>
+  <footer>
+    <p>© 2022 OpenRafy</p>
+</footer>
+</body>
+</html>
